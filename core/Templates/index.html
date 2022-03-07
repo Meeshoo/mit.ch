@@ -1,0 +1,46 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+    <title>mit.ch</title>
+    <link rel="shortcut icon" type='image/png' href="{%  static 'favicon.png' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'site.css' %}">
+    </head>
+
+<body>
+
+    <div class="bcg-a">
+        <h1>mit.ch</h1>
+        <h3>{{ welcomeMessage }}</h3>
+    </div>
+
+    <div class="bcg-b">
+        <h2>About me</h2>
+        <p>My name is Mitch, I really want the mit.ch domain name. So much so that I started creating this site 
+            and even named my GitHub repo <a href="https://github.com/Meeshoo/mit.ch">mit.ch</a>
+        </p>
+        <div class="fakespace"></div>
+    </div>
+
+    <div class="bcg-a">
+        <h2>Tech Projects</h2>
+        <p>I even made some tech projects, here are a list of the good ones:</p>
+        <ul>
+            <li>None</li>
+            <li>So</li>
+            <li>Far</li>
+            <li><a href="/blackhole">This site</a></li>
+          </ul>
+        <div class="fakespace"></div>
+    </div>
+
+    <div class="bcg-b">
+        <h2>Music</h2>
+        <p>And music which I made</p>
+        <div class="fakespace"></div>
+    </div>
+
+</body>
+</html>

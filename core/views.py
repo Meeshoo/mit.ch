@@ -2,7 +2,9 @@ from django.shortcuts import render
 from django.template.response import TemplateResponse
 from django.views.decorators.csrf import csrf_exempt
 
-from .models import scores
+from .models import core
+
+core = core()
 
 
 @csrf_exempt
@@ -10,24 +12,13 @@ def index(request):
 
     if request.method == 'GET':
 
-        pageTitle = "Home"
+        welcomeMessage = core.randomMessage()
 
-        return TemplateResponse(request, 'index.html', {"pageTitle":pageTitle})
+        return TemplateResponse(request, 'index.html', {"welcomeMessage":welcomeMessage})
 
 @csrf_exempt
-def about(request):
+def blackhole(request):
 
     if request.method == 'GET':
 
-        pageTitle = "About Me"
-
-        return TemplateResponse(request, 'index.html', {"pageTitle":pageTitle})
-
-@csrf_exempt
-def projects(request):
-
-    if request.method == 'GET':
-
-        pageTitle = "Projects"
-
-        return TemplateResponse(request, 'index.html', {"pageTitle":pageTitle})
+        return TemplateResponse(request, 'blackhole.html', {"welcomeMessage":"no"})

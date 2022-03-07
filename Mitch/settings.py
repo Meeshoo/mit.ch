@@ -7,7 +7,7 @@ SECRET_KEY = 'VerySecretPleaseDontHackMe'
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'mit.ch']
+ALLOWED_HOSTS = ['127.0.0.1', 'mit.ch', 'blocks.mitlan.net']
 
 # Application definition
 
@@ -21,6 +21,7 @@ INSTALLED_APPS = [
 
     # Made by me
     'core',
+    'itemlist',
 ]
 
 MIDDLEWARE = [
